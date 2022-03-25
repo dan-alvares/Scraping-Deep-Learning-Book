@@ -1,42 +1,40 @@
 from bs4 import BeautifulSoup as bs
-from lxml.html.clean import Cleaner
-
-sanitizar_url = Cleaner()
+import re
 
 # url = 'https://www.deeplearningbook.com.br/uma-breve-historia-das-redes-neurais-artificiais/'
 #
 # conteudo = requests.get(url).content
-with open('teste.html', 'r') as arquivo_html:
+with open('teste2.html', 'r') as arquivo_html:
     conteudo = arquivo_html.read()
 
 registro_conteudo = []
-registro_imagens = []
 soup = bs(conteudo, 'lxml')
 titulo_capitulo = soup.find(class_='entry-title')  # raspa o título do conteúdo da página
 registro_conteudo.append(titulo_capitulo.text)
 conteudo_capitulo = soup.find(class_='entry-content')  # raspa o conteúdo textual e imagens contidas no texto da página
-imagens = conteudo_capitulo.find_all('img')
-for imagem in imagens:
-    dados_imagem = imagem['alt'], imagem['src']
-    registro_imagens.append(dados_imagem)
+
+padrao_p = re.compile('^<p.style="text\-align:.justify;">.')
+padrao_ref = re.compile('^<p>.')
+padrao_img = re.compile('^<p><img.')
+padrao_img_alt = re.compile('^<p><figure\ class="centered\-image"><img.')
+padrao_vazio = re.compile('^<p>.</p>$')
 
 for parte in conteudo_capitulo:
-    if parte.name == 'p':
+    if bool(re.match(padrao_p, str(parte))):
         registro_conteudo.append(parte.text)
-    else:
+    elif bool(re.match(padrao_img, str(parte))) or bool(re.match(padrao_img_alt, str(parte))):
+        imagem = parte.find('img')
+        imagem_dados = (imagem['alt'], imagem['src'])
+        registro_conteudo.append(imagem_dados)
+    elif bool(re.match(padrao_ref, str(parte))):
+        registro_conteudo.append(parte.text)
+    elif bool(re.match(padrao_vazio, str(parte))):
         continue
 
 for x in registro_conteudo:
-    contador = 0
-    teste = 'Fig' in x
-    if teste:
-        registro_conteudo[registro_conteudo.index(x)] = registro_imagens[contador]
-        contador += 1
-    else:
-        continue
+    print(x)
 
-# for c in registro_conteudo:
-#     print(registro_conteudo.index(c), c)
+
 # proximo_conteudo = soup.find(class_='navigation post-navigation')
 #
 # proximo_link = proximo_conteudo.find(name='div', class_='nav-next')
@@ -45,3 +43,5 @@ for x in registro_conteudo:
 #     print(proximo_link.a['href'])
 # else:
 #     pass
+
+
