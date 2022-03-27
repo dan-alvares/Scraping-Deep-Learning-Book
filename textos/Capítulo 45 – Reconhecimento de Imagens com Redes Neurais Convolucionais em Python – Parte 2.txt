@@ -1,0 +1,39 @@
+Conteúdo criado por Data Science Academy
+Link para acessar o conteúdo original: https://www.deeplearningbook.com.br/reconhecimento-de-imagens-com-redes-neurais-convolucionais-em-python-parte-2/
+//////////////////////////////
+Capítulo 45 – Reconhecimento de Imagens com Redes Neurais Convolucionais em Python – Parte 2
+//////////////////////////////
+Vamos iniciar nosso trabalho de Reconhecimento de Imagens com Redes Neurais Convolucionais em Python cuidando da nossa matéria-prima: dados. Precisamos fazer o download das imagens e organizá-las para então iniciar o trabalho.
+Usaremos como fonte de dados, o famoso dataset Dogs and Cats oferecido pelo Kaggle, o portal sobre Competições de Data Science, onde inclusive a Data Science Academy promove entre os alunos matriculados nas Formações as Competições DSA de Machine Learning. O Kaggle oferece diversos datasets públicos que podem ser usados para você desenvolver seus projetos e incluir no seu portfólio, uma excelente forma de demonstrar suas habilidades em Data Science e Machine Learning. Mostramos como construir um portfólio de projetos de Data Science aqui: Preparação Para Carreira de Cientista de Dados.
+Você pode fazer o download das imagens neste endereço: Dogs vs. Cats. Mas nós já fizemos o download e disponibilizamos para você junto com o Jupyter Notebook no repositório deste livro no Github. Como este dataset é bastante famoso, alternativamente, você pode fazer o download oferecido pela Microsoft Research neste endereço Kaggle Cats and Dogs Dataset.
+Feito o download das imagens (você vai precisar de aproximadamente 1 GB de espaço em disco para as imagens), precisamos organizar os arquivos em uma estrutura de diretórios da seguinte forma:
+ 
+
+ 
+Crie um diretório (por exemplo Cap45, mas pode ser o nome que você quiser). Dentro dele crie mais 3 pastas: dataset_treino, dataset_validation e dataset_teste. Não use espaços no nome e muito menos acentos nas palavras, pois isso causa diversos problemas em programação.
+Dentro da pasta dataset_treino, crie mais duas pastas, cats (que vai receber as 12.500 imagens de gatos) e dogs (que vai receber as 12.500 imagens de cachorros). 
+Nas pastas dataset_validation e dataset_teste não é necessário criar sub pastas e dentro delas colocaremos as 12.500 imagens de validação e 1.000 imagens de teste, respectivamente. As imagens de validação serão usadas para avaliar o modelo durante o treinamento e as imagens de teste serão usadas para avaliar o modelo depois do treinamento.
+Podemos agora visualizar algumas imagens usando o Jupyter Notebook, que você encontra no repositório deste livro no Github. Caso não tenha familiaridade com o Jupyter Notebook, acesse o Capítulo 1 do curso gratuito Python Fundamentos Para Análise de Dados.
+Se você criou a estrutura de diretórios de forma correta, então as seguintes células mostrarão algumas das imagens:
+('image1', 'https://www.deeplearningbook.com.br/wp-content/uploads/2019/05/image1-1024x851.png')
+ 
+('image2', 'https://www.deeplearningbook.com.br/wp-content/uploads/2019/05/image2-951x1024.png')
+ 
+Se as imagens foram mostradas de forma correta, então os dados estão prontos para serem explorados. É o que faremos no próximo capítulo! Até lá.
+ 
+Referências:
+O Que é Visão Computacional?
+Formação Inteligência Artificial
+Formação Análise Estatística Para Cientistas de Dados
+Formação Cientista de Dados
+Don’t Decay the Learning Rate, Increase the Batch Size
+Train longer, generalize better: closing the generalization gap in large batch training of neural networks
+Practical Recommendations for Gradient-Based Training of Deep Architectures
+Gradient-Based Learning Applied to Document Recognition
+A Comprehensive Guide to Convolutional Neural Networks 
+Neural Networks & The Backpropagation Algorithm, Explained
+Neural Networks and Deep Learning
+Machine Learning
+The Elements of Statistical Learning: Data Mining, Inference, and Prediction, Second Edition
+Gradient Descent For Machine Learning
+Pattern Recognition and Machine Learning

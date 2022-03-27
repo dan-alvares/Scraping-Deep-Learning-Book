@@ -1,0 +1,28 @@
+Conteúdo criado por Data Science Academy
+Link para acessar o conteúdo original: https://www.deeplearningbook.com.br/reconhecimento-de-imagens-com-redes-neurais-convolucionais-em-python-parte-4/
+//////////////////////////////
+Capítulo 47 – Reconhecimento de Imagens com Redes Neurais Convolucionais em Python – Parte 4
+//////////////////////////////
+Vejamos como implementar nosso modelo de Rede Neural Convolucional que vai aprender a diferença nas imagens de cães e gatos e quando apresentarmos novas imagens ao modelo, ele será capaz de prever se a imagem é de um cão ou gato de forma automática.
+Abaixo você encontra todos os detalhes de construção da rede, treinamento do modelo e avaliação (use a barra de rolagem para visualizar todo o código). O Jupyter Notebook completo está disponível no repositório deste livro no Github.
+Com isso concluímos esta introdução a uma das mais famosas arquiteturas de Deep Learning, as Redes neurais Convolucionais. A partir do próximo capítulo estudaremos outras arquiteturas. Até lá.
+Lembrando que a DSA oferece um programa completo para quem deseja aprender Deep Learning e Inteligência Artificial na prática e de forma profissional, a Formação Inteligência Artificial. Faça como milhares de alunos no Brasil e no mundo e comece sua capacitação agora mesmo. O curso é 100% online e 100% em português. Seja um profissional em alta demanda!
+ 
+Referências:
+O Que é Visão Computacional?
+Formação Inteligência Artificial
+Formação Análise Estatística Para Cientistas de Dados
+Formação Cientista de Dados
+ImageNet Classification with Deep Convolutional Neural Networks
+Don’t Decay the Learning Rate, Increase the Batch Size
+How to calculate the number of parameters in the CNN?
+Train longer, generalize better: closing the generalization gap in large batch training of neural networks
+Practical Recommendations for Gradient-Based Training of Deep Architectures
+Gradient-Based Learning Applied to Document Recognition
+A Comprehensive Guide to Convolutional Neural Networks 
+Neural Networks & The Backpropagation Algorithm, Explained
+Neural Networks and Deep Learning
+Machine Learning
+The Elements of Statistical Learning: Data Mining, Inference, and Prediction, Second Edition
+Gradient Descent For Machine Learning
+Pattern Recognition and Machine Learning

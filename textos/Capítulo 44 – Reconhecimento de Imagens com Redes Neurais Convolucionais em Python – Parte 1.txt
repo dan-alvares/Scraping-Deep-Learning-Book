@@ -1,0 +1,43 @@
+Conteúdo criado por Data Science Academy
+Link para acessar o conteúdo original: https://www.deeplearningbook.com.br/reconhecimento-de-imagens-com-redes-neurais-convolucionais-em-python-parte-1/
+//////////////////////////////
+Capítulo 44 – Reconhecimento de Imagens com Redes Neurais Convolucionais em Python – Parte 1
+//////////////////////////////
+Nossa tarefa é simples: vamos fornecer a um modelo de Deep Learning uma imagem e o modelo terá que classificar se a imagem é de um cachorro ou gato! Parece fácil, não? Na verdade, não! Para que isso funcione precisamos construir e treinar um modelo de Deep Learning, o que envolve conhecimentos de Matemática, Estatística, Programação, Visão Computacional, Pré-Processamento de imagens, entre outras áreas. Mas nós vamos fazer isso juntos. Nos próximos capítulos vamos construir e treinar um modelo de Deep Learning para Reconhecimento de Imagens com Redes Neurais Convolucionais em Python. Será uma excelente oportunidade de praticar tudo que estudamos no livro até aqui e preparar você para os capítulos mais avançados deste livro, quando estudaremos outras arquiteturas de Deep Learning. Vamos começar?
+Para começar, precisamos definir claramente o problema a ser resolvido e como vamos resolvê-lo.
+Problema: Dada uma imagem, é um cachorro ou um gato? 
+A primeira coisa que precisamos é de muitas imagens de cachorros e gatos, para poder treinar um algoritmo de Deep Learning. Usaremos, portanto, uma abordagem de aprendizagem supervisionada, onde apresentaremos ao algoritmo diversas imagens, devidamente marcadas como sendo imagens de cães e gatos e então treinaremos o algoritmo. Ao final do treinamento, teremos um modelo que poderá receber novas imagens (desta vez não marcadas previamente) e então o modelo deverá ser capaz de classificar como sendo imagem de cão ou gato.
+Para essa tarefa, usaremos uma arquitetura de Rede Neural Convolucional, a mesma que estudamos nos capítulos anteriores. Essa arquitetura usa métodos de convolução para poder prever características específicas de uma imagem de acordo com o que aprende em um conjunto de treinamento. Por exemplo, podemos dizer que é possível perceber a diferença ao procurar bigodes em um gato ou focinho comprido em um cachorro. Mas uma Rede Neural Convolucional procura muitos outros recursos baseados no que temos em um conjunto de treinamento.
+Solução: Usar uma Rede Neural Convolucional para aprender recursos de imagens e assim prever se uma imagem contém um cachorro ou um gato.
+Data Science, Deep Learning, Machine Learning, Inteligência Artificial. Nada disso faz sentido sem dados, muitos dados (por isso Big Data é cada vez mais importante nos dias de hoje). E para esta tarefa, teremos os seguintes dados:
+Conjunto de dados de treino: Teremos 12.500 imagens de cães e 12.500 imagens de gatos para o conjunto de treinamento.
+Conjunto de dados de validação: Teremos 12.500 imagens de cães e gatos.
+Conjunto de dados de teste: Teremos 1.000 imagens de cães e gatos.
+Essa á uma questão onde os iniciantes tem muitas dúvidas. Por que precisamos de dados de treino, validação e teste? Usamos os dados de treino para treinar o algoritmo e então criar o modelo preditivo. Usamos os dados de validação, para avaliar o modelo durante o treinamento. Usamos os dados de teste para validar a performance do modelo já treinado, ou seja, apresentamos ao modelo dados que ele não viu durante o treinamento, a fim de garantir que ele é capaz de fazer previsões.
+Vamos realizar as seguintes atividades na construção do modelo de Reconhecimento de Imagens com Redes Neurais Convolucionais em Python:
+Começaremos nosso trabalho com tarefas de visualização de dados e análise exploratória. Precisamos compreender os dados antes de qualquer outra coisa, como as dimensões das imagens, escala de cores, detalhes de sombras e se as imagens possuem mais detalhes não relacionados diretamente a um cachorro ou gato, como nesta imagem abaixo! Afinal, o modelo terá que aprender que um cachorro vestido de Hello Kitty ainda é um cachorro!
+ 
+
+ 
+Nosso próximo passo será construir a arquitetura de rede. Definiremos quantas camadas serão usadas, camadas de convolução e pooling, funções de ativação, métrica de avaliação, descida do gradiente com backpropagation e outros detalhes. Discutiremos porque estamos fazendo nossas escolhas.
+Com a arquitetura definida, podemos então treinar a nossa rede, o que consiste em apresentar os dados ao algoritmo para que o aprendizado ocorra. Definiremos os hiperparâmetros e por quanto tempo treinaremos a rede. Vamos aproveitar e discutir sobre técnicas para evitar o overfitting (quando o modelo se ajusta demais aos dados de treino).
+Por fim, usaremos o modelo treinado para fazer as classificações. Entregaremos ao modelo novas imagens e ele terá que classificar se a imagem é de um cachorro ou gato! Na prática, o modelo nunca faz a classificação com 100% de certeza. O que ele faz é uma previsão (para ser ainda mais preciso, uma inferência) e nosso trabalho é garantir que essa previsão tenha o mais alto nível de acurácia possível.
+Para este trabalho usaremos, claro, linguagem Python com Keras e TensorFlow. Vamos explicar a você quais são as opções de frameworks e cada linha de código será explicada em detalhes. Vamos considerar que você já conhece linguagem Python e sabe executar um Jupyter Notebook. Se não sabe, então acesse pelo menos o Capítulo 1 do nosso curso gratuito Python Fundamentos Para Análise de Dados.
+Está pronto? Então nos encontramos no próximo capítulo!
+ 
+Referências:
+O Que é Visão Computacional?
+Formação Inteligência Artificial
+Formação Análise Estatística Para Cientistas de Dados
+Formação Cientista de Dados
+Don’t Decay the Learning Rate, Increase the Batch Size
+Train longer, generalize better: closing the generalization gap in large batch training of neural networks
+Practical Recommendations for Gradient-Based Training of Deep Architectures
+Gradient-Based Learning Applied to Document Recognition
+A Comprehensive Guide to Convolutional Neural Networks 
+Neural Networks & The Backpropagation Algorithm, Explained
+Neural Networks and Deep Learning
+Machine Learning
+The Elements of Statistical Learning: Data Mining, Inference, and Prediction, Second Edition
+Gradient Descent For Machine Learning
+Pattern Recognition and Machine Learning

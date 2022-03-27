@@ -1,0 +1,14 @@
+Conteúdo criado por Data Science Academy
+Link para acessar o conteúdo original: https://www.deeplearningbook.com.br/capitulo-75-inteligencia-artificial-para-jogar-blackjack-parte-5/
+//////////////////////////////
+Capítulo 75 – Inteligência Artificial Para Jogar Blackjack – Parte 5
+//////////////////////////////
+Vamos trabalhar na Parte 5 do Projeto para treinar, avaliar e concluir nosso agente inteligente.
+Clique na imagem abaixo para acessar o Jupyter Notebook com o código completo.
+
+O Jupyter Notebook está em modo de somente leitura, pois está na conta da DSA. Para executar na sua conta, clique no menu File e salve uma cópia ou apenas execute no modo Playground clicando no botão na parte superior.
+Esse Jupyter Notebook é um “caderno” completo de conhecimento, com fórmulas, definições, links e, claro, código Python.
+Referências:
+Formação Inteligência Artificial
+Formação Análise Estatística Para Cientistas de Dados
+Formação Cientista de Dados
