@@ -13,10 +13,10 @@ Eles oferecem uma diversidade de cursos para quem deseja estudar Data Science. C
 Este projeto de Web Scraping surgiu com o intuito de consolidar meus conhecimentos e oferecer a disponibilidade de tais materias para acesso off-line.
 Não sou afiliado e não possuo qualquer autoria sobre o material aqui fornecido. 
 
-Os direitos desse material são da Data Science Academy.
+A Data Science Academy detêm todos os direitos sobre tal material.
 
 ### Arquivos Raspasdos:
 
-No arquivo zipado do release segue os 90 textos disponibilizados até a data de hoje, contendo link para o material original, título do artigo e conteúdo textual completo.
+No arquivo zipado do release seguem os 90 textos disponibilizados até a data de hoje, contendo link para o material original, título do artigo e conteúdo textual completo.
 
 Aqui segue o [link](https://github.com/dan-alvares/Scraping-Deep-Learning-Book/releases/download/v1.0/textos.zip) para o arquivo contendo todos os textos postados até a data de hoje (27/03/2022).
