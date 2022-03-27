@@ -2,6 +2,7 @@
 
 - Tal trabalho foi desenvolvido apenas com intuito educativo, consolidando meus conhecimentos de web scraping.
 - Todo o material se encontra público no site: https://www.deeplearningbook.com.br/
+- A **Data Science Academy detêm todos os direitos sobre tal material**.
 
 
 ### Agradecimentos:
@@ -11,8 +12,6 @@ Eles oferecem uma diversidade de cursos para quem deseja estudar Data Science. C
 
 Este projeto de Web Scraping surgiu com o intuito de consolidar meus conhecimentos e oferecer a disponibilidade de tais materias para acesso off-line.
 Não sou afiliado e não possuo qualquer autoria sobre o material aqui fornecido. 
-
-A Data Science Academy detêm todos os direitos sobre tal material.
 
 
 ### Arquivos Raspasdos:
