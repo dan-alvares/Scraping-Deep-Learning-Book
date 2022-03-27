@@ -1,0 +1,24 @@
+Conteúdo criado por Data Science Academy
+Link para acessar o conteúdo original: https://www.deeplearningbook.com.br/treinando-um-agente-baseado-em-ia-para-jogar-box-no-atari-usando-linguagem-python/
+//////////////////////////////
+Capítulo 69 – Treinando Um Agente Baseado em IA Para Jogar Box no Atari Usando Linguagem Python
+//////////////////////////////
+Esta aula considera que você possui conhecimento em Linguagem Python. Se esse não for o caso, acesse nosso curso gratuito e comece aprender agora mesmo: Python Fundamentos Para Análise de Dados.
+Consideramos ainda que você já estudou os capítulos anteriores do Deep Learning Book.
+Nesta aula vamos desenvolver um agente inteligente em Python usando o algoritmo Q-Learning. O método de aprendizado será a Aprendizagem Por Reforço que estudamos nos capítulos anteriores do livro. 
+Nosso objetivo será Treinar Um Agente Baseado em IA Para Jogar Box no Atari (se você é mais jovem, pode não saber o que é o Atari. Ele marcou toda uma geração e podemos considerar como sendo o avô dos consoles de video game atuais. Mais detalhes aqui.)
+
+O desenvolvimento completo está no Jupyter Notebook que publicamos no Google Colab e tem acesse gratuito de qualquer computador conectado a internet no Planeta Terra. Mas para acessar o Google Colab você vai precisar de uma conta gratuita com o Google. 
+Clique no botão abaixo para acessar o Google Colab com o Jupyter Notebook e se for necessário a criação da conta o Google vai notificar você:
+ 
+
+ 
+O Jupyter Notebook está em modo de somente leitura, pois está na conta da DSA. Para executar na sua conta, clique no menu File e salve uma cópia ou apenas execute no modo Playground clicando no botão na parte superior.
+Esse Jupyter Notebook é um “caderno” completo de conhecimento, com fórmulas, definições, links e, claro, código Python.
+Você pode estar se perguntando: Como treinar um agente baseado em IA para jogar Box pode ajudar no aprendizado de Inteligência Artificial? Sua pergunta faz sentido. A questão é que as técnicas aprendidas nesse exemplo são usadas em aplicações mais avançadas, como por exemplo o robô de otimização de portfólios que ensinamos no curso de IA Aplicada a Finanças. Antes de aprender a correr, é preciso aprender a andar. Comece com o jogo e tudo fará cada vez mais sentido.
+Estude, aprenda e divirta-se! Algumas aplicações comerciais de IA de última geração usam as técnicas que você encontra no trabalho deste e dos próximos capítulos.
+No Capítulo 70 terá algo ainda mais interessante.
+Referências:
+Formação Inteligência Artificial
+Formação Análise Estatística Para Cientistas de Dados
+Formação Cientista de Dados

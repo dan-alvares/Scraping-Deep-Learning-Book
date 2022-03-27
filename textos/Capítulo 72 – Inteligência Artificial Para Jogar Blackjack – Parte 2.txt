@@ -1,0 +1,14 @@
+Conteúdo criado por Data Science Academy
+Link para acessar o conteúdo original: https://www.deeplearningbook.com.br/inteligencia-artificial-para-jogar-blackjack-parte-2/
+//////////////////////////////
+Capítulo 72 – Inteligência Artificial Para Jogar Blackjack – Parte 2
+//////////////////////////////
+Vamos trabalhar na Parte 2 do nosso Projeto e construir o modelo Modelo Deep Q Network.
+Mas não faremos “apenas” isso. Vamos criar um Plot para visualizar as jogadas do Agente Baseado em IA ao jogar Blackjack. Clique na imagem abaixo para acessar o Jupyter Notebook com o código completo.
+
+O Jupyter Notebook está em modo de somente leitura, pois está na conta da DSA. Para executar na sua conta, clique no menu File e salve uma cópia ou apenas execute no modo Playground clicando no botão na parte superior.
+Esse Jupyter Notebook é um “caderno” completo de conhecimento, com fórmulas, definições, links e, claro, código Python.
+Referências:
+Formação Inteligência Artificial
+Formação Análise Estatística Para Cientistas de Dados
+Formação Cientista de Dados

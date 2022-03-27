@@ -1,0 +1,55 @@
+Conteúdo criado por Data Science Academy
+Link para acessar o conteúdo original: https://www.deeplearningbook.com.br/os-detalhes-matematicos-das-gans-generative-adversarial-networks/
+//////////////////////////////
+Capítulo 57 – Os Detalhes Matemáticos das GANs (Generative Adversarial Networks)
+//////////////////////////////
+Neste capítulo vamos concluir nosso estudo das GANs com os detalhes matemáticos, antes de avançar para outra arquitetura de Deep Learning que estudaremos na sequência. Estamos considerando que você leu os capítulos anteriores sobre GANs.
+A modelagem de redes neurais requer essencialmente definir duas coisas: uma arquitetura e uma função de perda. Já descrevemos a arquitetura de redes adversárias generativas. Consiste em duas redes:
+Vamos agora examinar mais de perto a função de perda “teórica” das GANs. Se enviarmos ao discriminador dados “verdadeiros” e “gerados” nas mesmas proporções, o erro absoluto esperado do discriminador poderá ser expresso como:
+ 
+
+ 
+O objetivo do gerador é enganar o discriminador cujo objetivo é ser capaz de distinguir entre dados verdadeiros e dados gerados. Portanto, ao treinar o gerador, queremos maximizar esse erro enquanto tentamos minimizá-lo para o discriminador. Isso nos dá a fórmula abaixo:
+
+Para qualquer gerador G (juntamente com a densidade de probabilidade induzida p_g), o melhor discriminador possível é aquele que minimiza a integral abaixo:
+ 
+
+ 
+Para minimizar (em relação a D) essa integral, podemos minimizar a função dentro da integral para cada valor de x. Em seguida, definimos o melhor discriminador possível para um determinado gerador:
+
+(de fato, um dos melhores porque x valores tais que p_t (x) = p_g (x) podem ser manipulados de outra maneira, mas isso não importa para o que segue). Em seguida, pesquisamos G que maximiza:
+ 
+
+ 
+Parece complexo? É menos do que parece e explicamos sobre os fundamentos matemáticos por trás dessas fórmulas no curso Matemática Para Machine Learning. Novamente, para maximizar (em relação a G) essa integral, podemos maximizar a função dentro da integral para cada valor de x. Como a densidade p_t é independente do gerador G, não podemos fazer melhor do que definir G de modo que:
+
+Obviamente, como p_g é uma densidade de probabilidade que deve se integrar a 1, necessariamente temos o melhor G:
+ 
+
+ 
+Assim, mostramos que, em um caso ideal com gerador e discriminador de capacidade ilimitada, o ponto ideal do cenário adversário é tal que o gerador produz a mesma densidade que a densidade real e o discriminador não pode fazer melhor do que ser verdadeiro em um caso a cada dois, exatamente como a intuição nos disse. Por fim, observe também que G maximiza:
+ 
+
+ 
+Na fórmula acima vemos que G deseja maximizar a probabilidade esperada de o discriminador estar errado.
+ 
+As GANs são bem recentes e possuem uma ideia inovadora sobre como treinar uma arquitetura de rede neural. Muitos estudos e aplicações vem sendo feitos em todo mundo e já existem até algumas aplicações comerciais usando essa arquitetura de Deep Learning. Caso queira aprender a construir GANs na prática, acesse aqui.
+Pontos mais importantes sobre as GANs:
+Referências:
+Formação Inteligência Artificial
+Formação Análise Estatística Para Cientistas de Dados
+Formação Cientista de Dados
+Customizando Redes Neurais com Funções de Ativação Alternativas
+A Beginner’s Guide to Generative Adversarial Networks (GANs)
+A Leap into the Future: Generative Adversarial Networks
+Understanding Generative Adversarial Networks (GANs)
+How A.I. Is Creating Building Blocks to Reshape Music and Art
+Train longer, generalize better: closing the generalization gap in large batch training of neural networks
+Practical Recommendations for Gradient-Based Training of Deep Architectures
+Gradient-Based Learning Applied to Document Recognition
+Neural Networks & The Backpropagation Algorithm, Explained
+Neural Networks and Deep Learning
+Recurrent neural network based language model
+The Elements of Statistical Learning: Data Mining, Inference, and Prediction, Second Edition
+Gradient Descent For Machine Learning
+Pattern Recognition and Machine Learning
