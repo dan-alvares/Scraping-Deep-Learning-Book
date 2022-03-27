@@ -1,0 +1,41 @@
+Conteúdo criado por Data Science Academy
+Link para acessar o conteúdo original: https://www.deeplearningbook.com.br/algoritmo-de-agente-baseado-em-ia-com-reinforcement-learning-q-learning/
+//////////////////////////////
+Capítulo 68 – Algoritmo de Agente Baseado em IA com Reinforcement Learning – Q-Learning
+//////////////////////////////
+O Q-learning é um algoritmo de Aprendizado Por Reforço que busca encontrar a melhor ação a ser tomada, dado o estado atual. É considerado off-policy porque a função q-learning aprende com ações que estão fora da política atual, como executar ações aleatórias. Mais especificamente, o q-learning busca aprender uma política que maximize a recompensa total.
+O ‘q’ no q-learning significa qualidade. A qualidade, neste caso, representa a utilidade de uma determinada ação para obter alguma recompensa futura.
+Esse é um dos algoritmos mais usados em Aprendizado Por Reforço, o qual vamos estudar agora. É amplamente empregado em robótica, automação de games e robôs investidores na bolsa de valores.
+Q-learning é um algoritmo de aprendizado baseado em valor. Os algoritmos baseados em valor atualizam a função de valor com base em uma equação (particularmente a equação de Bellman). Enquanto o outro tipo, baseado em políticas, estima a função de valor com uma política gananciosa obtida a partir do último aprimoramento da política.
+Funções de valor são funções de par de ação de estado que estimam quão boa será uma ação específica em um determinado estado ou qual o retorno esperado para essa ação.
+O Q-Learning é um algoritmo off-policy (pode atualizar as funções de valor estimado usando ações hipotéticas, aquelas que ainda não foram tentadas) para o aprendizado da diferença temporal (método para estimar as funções de valor). Pode-se provar que, com treinamento suficiente, o Q-learning converge com a probabilidade 1 para uma aproximação da função de valor da ação para uma política de destino arbitrária. O Q-Learning aprende a política ideal, mesmo quando as ações são selecionadas de acordo com uma política mais exploratória ou até aleatória. O Q-learning pode ser implementado da seguinte maneira:
+
+Onde:
+O algoritmo pode ser interpretado como:
+Aqui o algoritmo:
+
+A próxima etapa para o agente é interagir com o ambiente e fazer atualizações nos pares de estado e ação em nossa tabela q: Q [estado, ação].
+Um agente interage com o ambiente com 1 de 2 maneiras possíveis. 
+A primeira é usar a tabela q como referência e visualizar todas as ações possíveis para um determinado estado. O agente seleciona a ação com base no valor máximo dessas ações. Isso é conhecido como Exploit, pois usamos as informações que temos disponíveis para tomar uma decisão.
+A segunda maneira é agir aleatoriamente. Isso é chamado de Explore. Em vez de selecionar ações com base na recompensa máxima futura, selecionamos uma ação aleatoriamente. A ação aleatória é importante porque permite ao agente explorar e descobrir novos estados que, de outra forma, não podem ser selecionados durante o processo de Exploit. Você pode equilibrar a Exploit / Explore usando o parâmetro épsilon (ε) e definindo o valor de quantas vezes deseja fazer Exploit versus Explore. 
+Quer criar um agente inteligente baseado em Aprendizado Por Reforço usando o algoritmo Q-Learning em Python?
+Então não perca o próximo capítulo.
+Referências:
+Formação Inteligência Artificial
+Formação Análise Estatística Para Cientistas de Dados
+Formação Cientista de Dados
+Customizando Redes Neurais com Funções de Ativação Alternativas
+A Beginner’s Guide to Deep Reinforcement Learning
+Reinforcement Learning: What is, Algorithms, Applications, Example
+What is reinforcement learning? The complete guide
+Reinforcement Learning algorithms — an intuitive overview
+Reinforcement learning
+Reinforcement Learning, Second Edition
+Applications of Reinforcement Learning in Real World
+Practical Recommendations for Gradient-Based Training of Deep Architectures
+Gradient-Based Learning Applied to Document Recognition
+Neural Networks & The Backpropagation Algorithm, Explained
+Recurrent neural network based language model
+The Elements of Statistical Learning: Data Mining, Inference, and Prediction, Second Edition
+Gradient Descent For Machine Learning
+Pattern Recognition and Machine Learning

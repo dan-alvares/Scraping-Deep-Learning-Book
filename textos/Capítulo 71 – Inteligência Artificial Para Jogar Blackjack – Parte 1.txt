@@ -1,0 +1,21 @@
+Conteúdo criado por Data Science Academy
+Link para acessar o conteúdo original: https://www.deeplearningbook.com.br/inteligencia-artificial-para-jogar-blackjack-parte-1/
+//////////////////////////////
+Capítulo 71 – Inteligência Artificial Para Jogar Blackjack – Parte 1
+//////////////////////////////
+Aprender é um dos prazeres da vida. Aprender se divertindo é melhor ainda, não acha?
+A partir deste capítulo e durante os próximos vamos trabalhar em um projeto completo para estudar o Aprendizado Por Reforço na prática, especificamente a Deep Q-Network. Criaremos um Agente baseado em Inteligência Artificial para jogar Blackjack.
+Eu sei que é difícil acreditar, então antes que você pergunte, já vou responder: Sim, o Projeto é inteiramente gratuito, sem custo, sem pegadinha. Ao final você terá um Assistente Virtual de IA Para Jogar Blackjack.
+('Blackjack', 'https://www.deeplearningbook.com.br/wp-content/uploads/2020/05/imagem1-1024x571.png')
+Nosso objetivo é ajudar a desenvolver e democratizar o conhecimento de Inteligência Artificial no Brasil.
+Precisaremos de diversas aulas para construir o Assistente Virtual, treinar, testar e avaliar e durante as aulas vamos explorar outros temas ligados ao Aprendizado Por Reforço que estudamos nos capítulos anteriores. Não fique ansioso e aproveite a jornada, pois haverá muito conhecimento e aprendizado durante todas as aulas.
+Um projeto como esse tem nível avançado, mas faremos o nosso melhor para explicar tudo bem passo a passo. Vamos começar?
+Cada parte do projeto terá um Jupyter Notebook com tudo explicado passo a passo. Não precisa instalar nada no seu computador, apenas usar o ambiente em nuvem do Google Colab através de um navegador. Clique na imagem abaixo para acessar o Jupyter Notebook deste capítulo:
+
+ 
+O Jupyter Notebook está em modo de somente leitura, pois está na conta da DSA. Para executar na sua conta, clique no menu File e salve uma cópia ou apenas execute no modo Playground clicando no botão na parte superior.
+Esse Jupyter Notebook é um “caderno” completo de conhecimento, com fórmulas, definições, links e, claro, código Python.
+Referências:
+Formação Inteligência Artificial
+Formação Análise Estatística Para Cientistas de Dados
+Formação Cientista de Dados

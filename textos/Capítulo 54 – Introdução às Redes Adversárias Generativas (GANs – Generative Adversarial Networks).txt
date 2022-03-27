@@ -1,0 +1,55 @@
+Conteúdo criado por Data Science Academy
+Link para acessar o conteúdo original: https://www.deeplearningbook.com.br/introducao-as-redes-adversarias-generativas-gans-generative-adversarial-networks/
+//////////////////////////////
+Capítulo 54 – Introdução às Redes Adversárias Generativas (GANs – Generative Adversarial Networks)
+//////////////////////////////
+Redes Adversárias Generativas (GANs) são arquiteturas de redes neurais profundas compostas por duas redes colocadas uma contra a outra (daí o nome “adversárias”). Esta é uma das arquiteturas mais recentes e mais fascinantes em Deep Learning e que estudaremos a partir de agora!
+As GANs foram introduzidos em um artigo de Ian Goodfellow e outros pesquisadores da Universidade de Montreal, incluindo Yoshua Bengio, em 2014. Referindo-se às GANs, o diretor de pesquisa de IA do Facebook, Yann LeCun, chamou o treinamento adversário de “a ideia mais interessante nos últimos 10 anos em Machine Learning”.
+O potencial das GANs é enorme porque elas podem aprender a imitar qualquer distribuição de dados. Ou seja, as GANs podem ser ensinadas a criar mundos estranhamente semelhantes aos nossos em qualquer domínio: imagens, música, fala, prosa. Elas são artistas robóticos, em certo sentido, e sua produção é impressionante – até comovente.
+Em uma virada surreal, a Christie’s (famosa rede inglesa de leilões) vendeu um retrato de US $ 432.000 gerado por uma GAN, com base no código-fonte aberto escrito por Robbie Barrat, de Stanford. Como a maioria dos artistas de verdade, ele não viu nada do dinheiro, que foi para a empresa francesa Obvious.
+
+ 
+Em 2019, o DeepMind mostrou que os Autoencoders Variacionais (VAEs) poderiam superar as GANs na geração de faces. Estudaremos os Autoencoders mais a frente aqui no livro. GANs e VAEs são estudadas na prática no curso Deep Learning II.
+Antes de entrar nos detalhes, vamos dar uma rápida visão geral do que são feitas as GANs. As Redes Adversárias Generativas pertencem ao conjunto de modelos generativos. Isso significa que eles são capazes de produzir / gerar (veremos como) novo conteúdo. Naturalmente, essa capacidade de gerar novo conteúdo faz com que as GANs pareçam um pouco “mágicas”, pelo menos à primeira vista. Nos capítulos seguintes superaremos a aparente mágica das GANs para mergulhar na matemática e modelagem por trás desses modelos. Não apenas discutiremos as noções fundamentais de que as Redes Adversárias Generativas se baseiam, mas estudaremos os conceitos principais dessa arquitetura passo a passo.
+Para entender as GANs, você deve saber como os algoritmos generativos funcionam e, para isso, contrastá-los com algoritmos discriminativos é instrutivo. Algoritmos discriminativos tentam classificar os dados de entrada; isto é, dados os recursos de uma instância de dados, eles prevêem um rótulo ou categoria à qual esses dados pertencem. Praticamente tudo que estudamos no livro até aqui se refere a algoritmos discriminativos.
+Por exemplo, dadas todas as palavras em um email (a instância de dados), um algoritmo discriminativo poderia prever se a mensagem é spam ou não é spam. O spam é um dos rótulos e o conjunto de palavras coletadas no email são os recursos que constituem os dados de entrada. Quando esse problema é expresso matematicamente, o rótulo é chamado y e os recursos são chamados x. A formulação p (y | x) é usada para significar “a probabilidade de y dado x”, que neste caso seria traduzido para “a probabilidade de um email ser spam, dadas as palavras que ele contém”.
+Algoritmos discriminativos mapeiam recursos para rótulos e estão preocupados apenas com essa correlação. Uma maneira de pensar sobre algoritmos generativos é que eles fazem o oposto. Em vez de prever um rótulo com determinados recursos, eles tentam prever os recursos com um determinado rótulo.
+A pergunta que um algoritmo generativo tenta responder é: Supondo que este email seja spam, qual a probabilidade desses recursos? Enquanto os modelos discriminativos se preocupam com a relação entre y e x, os modelos generativos se preocupam com “como você obtém x”. Eles permitem capturar p (x | y), a probabilidade de x dado y ou a probabilidade de recursos com um rótulo ou categoria. Dito isto, algoritmos generativos também podem ser usados ​​como classificadores. Acontece que eles podem fazer mais do que categorizar dados de entrada. O que mais eles podem fazer? Ainda estamos descobrindo, pois a evolução está acontecendo agora nesse momento com pesquisas em todo mundo e Cientistas de Dados e Engenheiros de IA trabalhando em diferentes aplicações.
+Outra maneira de pensar sobre isso é distinguir discriminativo de generativo assim:
+Vejamos uma visão geral das GANs e nos próximos capítulos entraremos nos detalhes matemáticos e estatísticos da arquitetura.
+Uma rede neural, chamada de gerador, gera novas instâncias de dados, enquanto a outra, o discriminador, avalia sua autenticidade; ou seja, o discriminador decide se cada instância de dados que ele analisa pertence ou não ao conjunto de dados de treinamento real (a imagem abaixo demonstra isso).
+('gan_schema', 'https://www.deeplearningbook.com.br/wp-content/uploads/2019/09/gan_schema.png')
+Digamos que estamos tentando fazer algo mais banal do que imitar a Mona Lisa. Geraremos números escritos à mão, como os encontrados no conjunto de dados MNIST, retirado do mundo real. O objetivo do discriminador, quando mostrada uma instância do verdadeiro conjunto de dados MNIST, é reconhecer aqueles que são autênticos.
+Enquanto isso, o gerador está criando novas imagens sintéticas que são transmitidas ao discriminador. O gerador gera as imagens fake na esperança de que elas também sejam consideradas autênticas, mesmo sendo falsas. O objetivo do gerador é gerar dígitos manuscritos cada vez melhores. O objetivo do discriminador é identificar imagens falsas do gerador. Ou seja, são duas redes adversárias, uma discriminativa (padrão que já estudamos até aqui no livro) e uma generativa que, em termos gerais, faz o oposto das redes discriminativas.
+Aqui estão as etapas de uma GAN:
+Então você tem um loop de feedback duplo assim:
+ 
+('GANs', 'https://www.deeplearningbook.com.br/wp-content/uploads/2019/09/GANs-1.png')
+ 
+ 
+Para o MNIST, a rede discriminadora é uma rede convolucional padrão que pode categorizar as imagens alimentadas, um classificador binomial que rotula as imagens como reais ou falsas. O gerador é uma rede convolucional inversa, em certo sentido: enquanto um classificador convolucional padrão recebe uma imagem e reduz a amostragem para produzir uma probabilidade, o gerador pega um vetor de ruído aleatório e faz o upsample para uma imagem. O primeiro joga fora os dados por meio de técnicas de downsampling, como o maxpool, e o segundo gera novos dados.
+Ambas as redes estão tentando otimizar uma função objetivo (função de perda) diferente e oposta. À medida que o discriminador muda seu comportamento, o gerador também muda e vice-versa. Suas perdas empurram um contra o outro. Uma ideia simples e genial! Durante o treinamento, a rede generativa vai aprendendo a criar uma imagem fake que fica cada vez mais próxima de uma imagem real. Alguns pesquisadores tem feito o mesmo com a voz, gerando falas que são falsas, mas se parecem muito com falas verdadeiras. Esse é o perigo das Deep Fakes, quando a tecnologia é usada para o mal, infelizmente. Aqui tem um exemplo de Deep Fake gerada com GAN para fala do ex-presidente dos EUA, Barack Obama: Fake Obama created using AI video tool – BBC News. 
+ 
+
+ 
+Quer aprender mais sobre as GANs? Então acompanhe os próximos capítulos!
+ 
+Referências:
+Formação Inteligência Artificial
+Formação Análise Estatística Para Cientistas de Dados
+Formação Cientista de Dados
+Customizando Redes Neurais com Funções de Ativação Alternativas
+A Beginner’s Guide to Generative Adversarial Networks (GANs)
+A Leap into the Future: Generative Adversarial Networks
+Understanding Generative Adversarial Networks (GANs)
+How A.I. Is Creating Building Blocks to Reshape Music and Art
+Train longer, generalize better: closing the generalization gap in large batch training of neural networks
+Practical Recommendations for Gradient-Based Training of Deep Architectures
+Gradient-Based Learning Applied to Document Recognition
+Neural Networks & The Backpropagation Algorithm, Explained
+Neural Networks and Deep Learning
+Recurrent neural network based language model
+The Elements of Statistical Learning: Data Mining, Inference, and Prediction, Second Edition
+Gradient Descent For Machine Learning
+Pattern Recognition and Machine Learning
+ 
